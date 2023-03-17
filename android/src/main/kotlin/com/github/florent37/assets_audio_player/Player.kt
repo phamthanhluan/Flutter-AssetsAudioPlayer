@@ -168,6 +168,10 @@ class Player(
     ) {
         try {
             stop(pingListener = false)
+            if (scope.isActive) {
+                scope.cancel()
+                scope = MainScope()
+            }
         } catch (t: Throwable){
             print(t)
         }
