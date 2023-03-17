@@ -45,7 +45,9 @@ class Player(
 
     // To handle position updates.
     private val handler = Handler()
-
+    
+    private var scope = MainScope()
+    
     private var mediaPlayer: PlayerImplem? = null
 
     //region outputs
@@ -185,7 +187,7 @@ class Player(
 
         _lastOpenedPath = assetAudioPath
       
-        GlobalScope.launch(Dispatchers.Main) {
+        scope.launch(Dispatchers.Main) {
             try {
                 val playerWithDuration = PlayerFinder.findWorkingPlayer(
                         PlayerFinderConfiguration(
