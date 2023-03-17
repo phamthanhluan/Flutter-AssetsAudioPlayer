@@ -15,9 +15,7 @@ import com.github.florent37.assets_audio_player.stopwhencall.AudioFocusStrategy
 import com.github.florent37.assets_audio_player.stopwhencall.StopWhenCall
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodChannel
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 import kotlin.math.max
 import kotlin.math.min
 
